@@ -1,0 +1,241 @@
+/* General Container and Image Background */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Flexbox for Boxes Container */
+.boxes-container {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+
+.box {
+  height: 20%;
+  position: relative;
+  background: rgba(0, 24, 72, 0.6);
+  color: white;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  width: 20%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  font-family: "Mate SC", serif;}
+
+.box:hover {
+  transform: translateY(-10px) scale(1.05);
+  background-color: #ffffff;
+}
+
+.box:hover{
+  color: black;
+
+}
+
+/* Flip the image when hovering the box */
+.box:hover .box-image {
+  transform: rotateY(180deg);
+}
+
+
+
+.box-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.7s;
+}
+
+
+
+
+
+
+
+/* Button Styles */
+button {
+  font-family: 'Mate Sc', sans-serif;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* General Section Styling */
+.section {
+  margin: 35px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 1000px;
+  line-height: 1.8;
+  
+ 
+}
+.section:hover {
+  background-color: rgb(255, 255, 255);
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section:hover{
+  color: ffffff;
+}
+
+
+/* Section Headings */
+.section h1, .section h2 {
+  text-align: center;
+  font-family: 'Mate Sc', sans-serif;
+  color: #000000;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+}
+
+/* Subheadings */
+.section h3 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #000000;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+/* Images */
+.section-image {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  
+}
+.section:hover {
+  transform: scale(1.03);
+  border-color: #007acc;
+}
+
+/* Paragraph Text */
+.section p {
+  text-align: center;
+  font-family: 'Mate Sc', sans-serif;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* Lists */
+.section ul {
+  margin: 15px 0;
+  padding: 0 20px;
+  list-style-type: disc;
+  font-family: 'Mate Sc', sans-serif;
+}
+/* Enhanced List Item Style */
+.section ul li {
+  margin: 10px 0;
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Mate Sc', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  padding: 8px 12px;
+  border-left: 3px solid #007acc;
+  background: #f5faff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.section ul li:hover {
+  background: #d6f1fc;
+  border-left-color: #005631;
+  transform: translateX(5px);
+}
+
+/* Custom Bullet Point */
+.section ul li::before {
+  content: "✔";
+  color: #007acc;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  left: -10px;
+}
+
+
+/* Highlight Important Headers */
+.section h1 {
+  font-size: 17px;
+  color: #007acc;
+  text-transform: uppercase;
+  border-bottom: 3px solid #007acc;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.section h2 {
+  font-size: 30px;
+  color: #007acc;
+  text-decoration: underline;
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+font-style: italic;
+  
+}
+
+/* Footer/Highlight Text */
+.section h3 {
+  background-color: #007acc;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 15px;
+  }
+  .section h1, .section h2 {
+    font-size: 22px;
+  }
+  .section p {
+    font-size: 14px;
+  }
+  .section h3 {
+    font-size: 18px;
+  }
+}
+

@@ -1,0 +1,341 @@
+/* General container styling */
+.container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background image */
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Keeps the image behind the boxes */
+}
+
+/* Box container */
+.box-container {
+    background: transparent;
+    display: flex;
+    gap: 20px; /* Space between the boxes */
+    z-index: 2; /* Ensures the boxes appear over the background */
+    font-size: 3rem;
+}
+
+/* Individual boxes */
+.box {
+    opacity: 80%; /* Slightly transparent */
+    color: white;
+    position: relative;
+    width: 240px;
+    height: 200px;
+    background: #343148; /* Light background with slight transparency */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    font-family: "Mate SC", serif;
+    
+}
+
+/* Box hover effect */
+.box:hover {
+    transform: translateY(-10px) scale(1.1); /* Lifts and zooms the box */
+    background: #ffffff; /* Solid background */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+
+}
+
+/* Change text color to black when hovering over the box */
+.box:hover * {
+    color: black; /* Sets text color to black for all child elements */
+}
+
+/* Icons inside the boxes */
+.box .icon {
+    font-size: 50px; /* Increase icon size */
+    color: #670000; /* Set the icon color (you can change this to your desired color) */
+    transition: transform 0.6s ease; /* Smooth flip effect */
+    transform-origin: center;
+}
+
+
+/* Icon flip animation */
+.box:hover .icon {
+    transform: rotateY(180deg); /* Flips the icon on hover */
+}
+
+/* Optional: to ensure icon is centered properly */
+.box .icon {
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+/* Paragraph text inside the boxes */
+.box p {
+    
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Booking button */
+.book-btn {
+    background: #007bff; /* Primary blue button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-family: "Mate SC", serif;
+}
+
+.book-btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .box-container {
+        flex-direction: column; /* Stack boxes vertically */
+        gap: 15px;
+    }
+
+    .box {
+        width: 90%; /* Boxes take most of the screen width */
+    }
+}
+
+
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+}
+
+/* Styling for the rest of the form (buttons, inputs, etc.) */
+
+
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    font-family: "Mate SC", serif;
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #0054c1;
+    font-family: "Mate SC", serif;
+
+
+}
+
+ form select {
+    width: 105%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #0054c1;
+    font-family: "Mate SC", serif;
+
+
+}
+
+
+form button {
+    width: 105%;
+    padding: 10px;
+    background-color: #0063cd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+form button:hover {
+    background-color: #00344c;
+}
+
+.cancel-btn {
+    background-color: #0063cd;
+    color: white;
+    font-size: 16px;
+}
+
+.cancel-btn:hover {
+    background-color: #00344c;
+}
+
+.greeting-message {
+    margin-top: 20px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+button {
+    background-color: #0054c1;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.button1{
+    background-color: #0054c1;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.cancel-btn{
+
+    background-color: #0054c1;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #00344c;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 80%;
+    }
+}
+
+
+
+
+#Information {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+}
+
+.consultant-section {
+    margin: 20px 0;
+}
+
+.consultant-section h3 {
+    color: #000000;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.doctor-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.doctor-box {
+    width: calc(20% - 15px);
+    text-align: center;
+    background-color: #007b9e;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.doctor-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.doctor-box p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.degree {
+    font-size: 14px;
+    color: #777;
+    font-weight: normal;
+}
+
+
+.doctor-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+   
+}
+
+.doctor-box:hover p {
+    color: #000000;
+}
+.consultant-details {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.consultant-details p {
+    margin: 5px 0;
+    color: #555;
+}
