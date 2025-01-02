@@ -1,0 +1,174 @@
+/* General styles for the About Us page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main container */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 5%;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    font-family: 'Mate Sc', sans-serif;
+    flex: 1;
+    background: #ffffff;
+    padding:40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+ .contact-form h3{
+    font-family: 'Arial', sans-serif;
+ }
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Mate Sc', sans-serif;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form button {
+    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    padding: 8px;
+    margin: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 91, 187, 0.4);
+}
+
+/* Right Section Styling */
+.right-section {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.rectangle-box {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.rectangle-box p{
+    font-family: 'Mate Sc', sans-serif;
+}
+
+.rectangle-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rectangle-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(61, 170, 7, 0.475);
+    z-index: 0;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+
+}
+
+.rectangle-box:hover::before {
+    transform: scale(1);
+}
+
+.rectangle-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.rectangle-box p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #f0f0f0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .right-section {
+        width: 100%;
+    }
+
+    .right-section {
+        margin-top: 20px;
+    }
+}
+
+

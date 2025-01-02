@@ -1,0 +1,84 @@
+#Information {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+}
+
+.consultant-section {
+    margin: 20px 0;
+}
+
+.consultant-section h3 {
+    color: #000000;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.doctor-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the boxes horizontally */
+    align-items: center; /* Centers the boxes vertically if needed */
+}
+
+.doctor-box {
+    width: calc(20% - 15px);
+    text-align: center;
+    background-color: #007b9e;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doctor-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.doctor-box p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.degree {
+    font-size: 14px;
+    color: #777;
+    font-weight: normal;
+}
+
+.doctor-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.doctor-box:hover p {
+    color: #000000;
+}
+.consultant-details {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.consultant-details p {
+    margin: 5px 0;
+    color: #555;
+}

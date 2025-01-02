@@ -1,12 +1,25 @@
 // Open popup for different test types
 function openPopup(testType) {
-  document.getElementById(testType + 'Popup').style.display = 'flex';
+  const popup = document.getElementById(testType + 'Popup');
+  popup.style.display = 'flex';
+  popup.setAttribute('aria-hidden', 'false');
 }
 
 // Close popup for different test types
 function closePopup(testType) {
-  document.getElementById(testType + 'Popup').style.display = 'none';
+  const popup = document.getElementById(testType + 'Popup');
+  popup.style.display = 'none';
+  popup.setAttribute('aria-hidden', 'true');
 }
+
+// Handle background click to close popup
+document.querySelectorAll('.popup').forEach(popup => {
+  popup.addEventListener('click', (event) => {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+});
 
 // Generate random reference number
 function generateReferenceNumber() {

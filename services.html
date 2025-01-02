@@ -7,7 +7,8 @@
     <link rel="icon" href="img/services icon.png">
 <link rel="stylesheet" href="CSS/home.css">
 <link rel="stylesheet" href="CSS/services.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
 
@@ -31,6 +32,7 @@
     <li><a href="services.html">Services</a></li>
       <li><a href="appointments.html">Appointments</a></li>
       <li><a href="healthy guide.html">Healthy guide</a></li>
+      <li><a href="consultant.html">Our Consultants</a></li>
       <li><a href="about.html" >About us </a></li>
    
     </ul>
@@ -107,7 +109,7 @@
       </select>
 
       <button type="submit">Submit</button>
-      <button type="button" onclick="closePopup('bloodTest')">Cancel</button>
+      <button id="bloodTestCancelButton" type="button" onclick="closePopup('bloodTest')">Cancel</button>
 
     </form>
     <div id="bloodTestConfirmationMessage" style="display: none;">
@@ -146,7 +148,7 @@
       </select>
 
       <button type="submit">Submit</button>
-      <button type="button" onclick="closePopup('urineTest')">Cancel</button>
+      <button id="urineTestCancelButton" type="button" onclick="closePopup('urineTest')">Cancel</button>
 
     </form>
     <div id="urineTestConfirmationMessage" style="display: none;">
@@ -187,7 +189,7 @@
       </select>
 
       <button type="submit">Submit</button>
-      <button type="button" onclick="closePopup('xrayTest')">Cancel</button>
+      <button id="xrayTestCancelButton" type="button" onclick="closePopup('xrayTest')">Cancel</button>
     </form>
     <div id="xrayTestConfirmationMessage" style="display: none;">
       <p>Thank you for booking! Your reference number is <span id="xrayTestReferenceNumber"></span>.</p>
@@ -227,7 +229,7 @@
       </select>
 
       <button type="submit">Submit</button>
-      <button type="button" onclick="closePopup('mriTest')">Cancel</button>
+      <button id="mriTestCancelButton" type="button" onclick="closePopup('mriTest')">Cancel</button>
     </form>
     <div id="mriTestConfirmationMessage" style="display: none;">
       <p>Thank you for booking! Your reference number is <span id="mriTestReferenceNumber"></span>.</p>
@@ -239,36 +241,60 @@
 
 
 
-<!-- Information Section -->
+
 <section id="Information">
   <div class="container-information">
-      <h2>Our Services</h2>
+    <div class="service">
       
-      <div class="service">
-        <!-- Blood Test -->
-        <div class="service-card">
-          <h3>Blood Test</h3>
-          <p>Blood tests are available at Care Plus Hospital from <strong>01:00 PM to 06:00 PM</strong> every day. Comprehensive blood analysis includes CBC (Complete Blood Count), glucose levels, cholesterol tests, and liver function tests. Price starts at <strong>$20 (LKR 7,200)</strong>. Additional specialized tests are available, priced individually.</p>
+      <div class="service-card">
+        <div class="icon-container1">
+          <i class="fa fa-tint blood-test icon-container1"></i>
         </div>
+        <h3>Blood Test</h3>
+        <p><strong>Time:</strong> 01:00 PM to 06:00 PM Daily</p>
+        <p><strong>Categories:</strong> CBC (Complete Blood Count), glucose levels, cholesterol tests, and liver function tests</p>
+        <p><strong>Booking Method:</strong> Online and physical booking available.</p>
+        <p><strong>Consultation Fee:</strong> 7200 LKR | Additional specialized tests are available, priced individually.</p>
 
-        <!-- Urine Test -->
-        <div class="service-card">
-          <h3>Urine Test</h3>
-          <p>Urine tests are available at Care Plus Hospital from <strong>01:00 PM to 06:00 PM</strong> every day. Tests include UTI (Urinary Tract Infection) screening, protein level checks, and pregnancy confirmation. Price starts at <strong>$15 (LKR 5,400)</strong>. Specialized analysis such as creatinine and microalbumin testing are available upon request.</p>
-        </div>
-
-        <!-- X-ray Test -->
-        <div class="service-card">
-          <h3>X-ray Test</h3>
-          <p>X-ray tests are available at Care Plus Hospital from <strong>01:00 PM to 06:00 PM</strong> every day. Digital imaging is provided for chest, abdomen, and orthopedic scans. Price starts at <strong>$50 (LKR 18,000)</strong>. Additional specialized X-rays such as contrast studies are available at varying prices.</p>
-        </div>
-
-        <!-- MRI Test -->
-        <div class="service-card">
-          <h3>MRI Test</h3>
-          <p>MRI tests are available at Care Plus Hospital from <strong>01:00 PM to 06:00 PM</strong> every day. Advanced imaging includes brain, spine, and joint scans. Price starts at <strong>$200 (LKR 72,000)</strong>. Contrast-enhanced MRI scans are also offered for enhanced diagnostic accuracy at additional costs.</p>
-        </div>
       </div>
+
+
+      <div class="service-card">
+        <div class="icon-container1">
+      <i class="fa fa-flask urine-test icon-container1"></i>
+        </div>
+        <h3>Urine Test</h3>
+        <p><strong>Time:</strong> 01:00 PM to 06:00 PM Daily</p>
+        <p><strong>Categories:</strong> UTI (Urinary Tract Infection) screening, protein level checks, and pregnancy confirmation </p>
+        <p><strong>Booking Method:</strong> Online and physical booking available.</p>
+        <p><strong>Consultation Fee:</strong> 5400 LKR |  Specialized analysis such as creatinine and microalbumin testing are available upon request</p>
+      </div>
+
+    
+      <div class="service-card">
+        <div class="icon-container1">
+          <i class="fa fa-x-ray x-ray-test icon-container1"></i>
+        </div>
+        <h3>X-ray Test</h3>
+        <p><strong>Time:</strong> 01:00 PM to 06:00 PM Daily</p>
+        <p><strong>Categories:</strong> Digital imaging is provided for chest, abdomen, and orthopedic scans. </p>
+        <p><strong>Booking Method:</strong> Online and physical booking available.</p>
+        <p><strong>Consultation Fee:</strong> 10000 LKR |  Additional specialized X-rays such as contrast studies are available at varying prices. </p>
+      </div>
+
+     
+      <div class="service-card">
+        <div class="icon-container">
+          <i class="fa fa-heartbeat heart-test icon-container1"></i>
+
+        </div>
+        <h3>MRI Test</h3>
+        <p><strong>Time:</strong> 01:00 PM to 06:00 PM Daily</p>
+        <p><strong>Categories:</strong>  Advanced imaging includes brain, spine, and joint scans</p>
+        <p><strong>Booking Method:</strong> Online and physical booking available.</p>
+        <p><strong>Consultation Fee:</strong> LKR 35000 |  Contrast-enhanced MRI scans are also offered for enhanced diagnostic accuracy at additional costs.</p>
+      </div>
+    </div>
   </div>
 </section>
 

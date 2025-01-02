@@ -129,9 +129,7 @@ box.icon:fa fa-tint{
 .popup-content {
     background-color: rgb(255, 255, 255);
     padding: 20px;
-    border-radius: 10px;
- 
-    max-width: 400px;
+ max-width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
 }
@@ -149,7 +147,7 @@ box.icon:fa fa-tint{
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #0054c1;
-    border-radius: 5px;
+   
 }
 
 .popup button{
@@ -157,7 +155,7 @@ box.icon:fa fa-tint{
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    
 }
 .popup button {
     background-color: #0063cd;
@@ -194,60 +192,96 @@ box.icon:fa fa-tint{
     margin: 0 auto;
   }
   
-  /* Information Section */
-#Information {
-    padding: 50px 0;
-    background-color: #ffffff;
-    background-image: url(young-handsome-physician-medical-robe-with-stethoscope.jpg);
-    background-size: cover;
-  }
-  
-  .container-information {
-    width: 90%;
+/* Container Styling */
+.container-information {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  #Information h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
+    padding: 20px;
   }
   
   .service {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   
-  /* Service Cards */
+  
   .service-card {
-    background: #343148;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #d6f7f4;
+    border-left: 5px solid #28a745; /* Left border color */
     padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.2s ease-in-out;
   }
+  
+ /* Zoom and Translate Hover Effect */
+.service-card:hover {
+    background-color: #fff;
+    transform: translateY(-5px) scale(1.05); /* Adds zoom along with translation */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhances shadow during hover */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  
+
+/* Container for the icon, positioned */
+.icon-container1 {
+    position: absolute; 
+    width: 100%;        /* Make the container fill its parent */
+    height: 100%;       /* Ensure the container stretches to fit icons */
+    display: flex;      /* Use flexbox for aligning icons */
+    justify-content: space-around; /* Align icons horizontally */
+    align-items: center;  /* Center icons vertically */
+}
+
+/* Apply custom size for all icons using higher specificity */
+.fa, .fa-tint, .fa-flask, .fa-x-ray, .fa-heartbeat {
+    font-size: 35px !important; /* Force icon size */
+    display: inline-block; /* Ensure icons are inline */
+}
+
+/* Specific styles for each icon */
+.blood-test {
+    color: #ff4d4d !important;  /* Red for blood test */
+}
+
+.urine-test {
+    color: #0073e6 !important;  /* Blue for urine test */
+}
+
+.x-ray-test {
+    color: #33cc33 !important;  /* Green for x-ray */
+}
+
+.heart-test {
+    color: #ff3399 !important;  /* Pink for heart test */
+}
+
   
   .service-card h3 {
     font-size: 1.5rem;
-    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
   }
   
   .service-card p {
-    color: #000000;
-    line-height: 1.6;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .service-card {
-    background:#D1B894;
-    border-radius: 8px;
-    padding: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #555;
   }
   
-  .service-card:hover {
-    transform: scale(1.03);
-    background-color: #ffffff;
-
+  .service-card p strong {
+    color: #333;
   }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service {
+      grid-template-columns: 1fr;
+    }
+  }
+  
   

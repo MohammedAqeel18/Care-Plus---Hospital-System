@@ -448,9 +448,9 @@ width: 100%;
 .container-card {
   display: flex;
   flex-direction: row;
-  background: rgba(186, 209, 255, 0.6);
-  border: 2px solid #007bff;
-  border-radius: 10px;
+  background: #d6f7f4;
+  
+
   color: #000000;
   overflow: hidden;
   font-family:'Times New Roman', Times, serif;
@@ -464,10 +464,11 @@ width: 100%;
   transform: scale(1.02);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
+  border: 2px solid #00557c;
 }
 
 .container-card img {
-  width: 200px;
+  width: 300px;
   height: auto;
   object-fit: cover;
 }
@@ -486,3 +487,5 @@ width: 100%;
   font-size: 1em;
   color: #000000;
 }
+
+
